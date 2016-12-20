@@ -24,4 +24,10 @@ export /**
         return projects;
     }
 
+    public getAboutDetails():Array<string>{
+        let image:string="images/pic08.jpg";
+        let details:string="Details about me..";
+
+        return [image,details];
+    }
 }
