@@ -1,0 +1,32 @@
+<div class="container">
+
+    <header>
+        <h2>Contact</h2>
+    </header>
+
+    <p>{{description}}</p>
+
+    <form method="post" [formGroup]="contactForm"  (ngSubmit)="submitContactForm(contactForm)">
+        <div class="row">
+            <div class="6u 12u$(mobile)">
+                <input type="text" name="name" formControlName="name" required placeholder="Name" />
+                <!--<span class="text text-danger" *ngIf="contactForm.controls.name.errors && contactForm.controls.name.touched ">Please provide your name.</span>-->
+            </div>
+
+            <div class="6u$ 12u$(mobile)">
+                <input type="email" name="email" formControlName="email" required placeholder="Email" />
+                <!--<span class="text text-danger" *ngIf="contactForm.controls.email.errors && contactForm.controls.email.touched ">Please provide valid email.</span>-->
+            </div>
+
+            <div class="12u$">
+                <textarea name="message" formControlName="message" required placeholder="Message"></textarea>
+                <!--<span class="text text-danger" *ngIf="contactForm.controls.message.errors && contactForm.controls.message.touched ">Please provide some message.</span>-->
+            </div>
+
+            <div class="12u$">
+                <input type="submit"  value="Send Message" />
+            </div>
+        </div>
+    </form>
+
+</div>
